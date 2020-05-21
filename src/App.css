@@ -1,38 +1,468 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-view-header {
+  height: 125px;
+  border: black 2px solid;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  background-color: yellowgreen;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  height: 37px;
+  width: auto;
+  text-align: center;
+  margin-top: 30px;
+  border: solid;
+  font-family: cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login-button {
+  width: 70px;
+  height: 40px;
+  margin-top: 27px;
+  background-color: chocolate;
+  font-family: cursive;
+  font-size: larger;
+  border-right-style: none;
+  cursor: pointer;
+}
+
+.search-button {
+  height: 37px;
+  border: black solid;
+  border-left-style: none;
+  position: absolute;
+  top: 32px;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
+}
+
+.site-title {
+  position: absolute;
+  top: 98px;
+  left: 184px;
+  font-size: large;
+  font-family: cursive;
+}
+
+.user-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text-field {
+  display: block;
+  margin-bottom: 10px;
+  height: 25px;
+  width: 50%;
+  background-color: blanchedalmond;
+  text-align: center;
+  font-size: medium;
+  font-family: cursive;
+}
+
+.input-field {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 68px;
+}
+
+.form-container {
+  margin: auto;
+  margin-top: 115px;
+  width: 40%;
+  border: 3px solid crimson;
+  padding: 10px;
+  text-align: center;
+  background-color: yellowgreen;
+}
+
+.span-field {
+  margin-right: 10px;
+  font-family: cursive;
+  font-size: larger;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button-field {
+  height: 30px;
+  background-color: blanchedalmond;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.text {
+  display: block;
+  font-size: smaller;
+  font-family: cursive;
+}
+
+.shopping-cart-img {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.error-field {
+  color: red;
+  font-size: larger;
+  font-family: cursive;
+}
+
+.userName-field {
+  margin-top: 33px;
+  font-size: larger;
+  font-family: cursive;
+  color: darkviolet;
+}
+
+.password-toggle {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -7px;
+}
+
+.product-image > img {
+  max-height: 335px;
+  max-width: 355px;
+  margin: 25px 0px 20px 30px;
+}
+
+.product-name {
+  margin-bottom: 20px;
+}
+
+.product-name > span {
+  font-family: cursive;
+  font-size: large;
+}
+
+.product-description {
+  font-size: medium;
+  font-family: auto;
+  margin-bottom: 60px;
+}
+
+.display-product {
+  border: 1px solid navy;
+  display: flex;
+}
+
+.product-name-description-price {
+  margin: 30px 40px;
+}
+
+.product-price {
+  font-size: x-large;
+}
+
+.cart-button {
+  height: 40px;
+  background-color: chocolate;
+  font-family: cursive;
+}
+
+.product-price-cart {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.shopping-cart-img > span {
+  font-family: cursive;
+  display: block;
+  font-size: small;
+}
+
+.cart-container {
+  margin: auto;
+  border: 20px so;
+  border: 4px solid;
+  padding: 35px;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  background: white;
+  z-index: 999;
+}
+
+.cart-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 37px solid transparent;
+  border-bottom-color: white;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -18.5px;
+  margin-top: -37px;
+}
+
+.cart-overlay {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cart-container-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-product-name {
+  font-family: cursive;
+  font-size: medium;
+}
+
+.cart-product-price {
+  font-family: cursive;
+}
+
+.indicator {
+  border: 1px solid;
+  padding: 8px;
+  background-color: chartreuse;
+  font-family: cursive;
+}
+
+.trash-icon {
+  margin-left: 15px;
+}
+
+.cart-title {
+  margin-bottom: 10px;
+  font-family: fantasy;
+  font-size: larger;
+}
+
+.cart-due {
+  display: flex;
+  margin-top: 30px;
+}
+
+.cart-due > p:first-of-type {
+  font-size: larger;
+  font-family: fantasy;
+}
+
+.cart-price {
+  margin: 10px;
+  font-size: larger;
+  font-family: fantasy;
+  margin-top: 30px;
+}
+
+.userName-field:hover .dropdown-logout {
+  display: block;
+}
+
+.dropdown-logout {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 75px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown-logout a {
+  color: black;
+  padding: 2px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-logout a:hover {
+  background-color: green;
+}
+
+.login-button-shake-button {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  cursor: pointer;
+  width: 70px;
+  height: 40px;
+  margin-top: 27px;
+  background-color: chocolate;
+  font-family: cursive;
+  font-size: larger;
+  border-right-style: none;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
   }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.checkout-button {
+  width: auto;
+  height: 35px;
+  float: right;
+  background-color: coral;
+  font-size: large;
+  font-family: fantasy;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 10px;
+}
+.Checkout-user {
+  display: flex;
+}
+.FirstName-checkout,
+.card-name,
+.card-expiration {
+  height: 35px;
+  width: 40%;
+  margin: 10px 30px;
+  border-radius: 5px;
+  font-family: cursive;
+}
+.LastName-checkout,
+.card-number,
+.card-cvv {
+  left: 50%;
+  position: absolute;
+  height: 35px;
+  width: 30%;
+  margin: 10px 30px;
+  border-radius: 5px;
+  font-family: cursive;
+}
+.mobilenumber-checkout,
+.address1-checkout {
+  width: 89%;
+  margin: 10px 30px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: cursive;
+}
+.checkout-section-header {
+  margin: 15px;
+  font-size: large;
+  font-family: fantasy;
+}
+.checkout-page {
+  box-sizing: border-box;
+  border: 2px solid;
+  background-color: aliceblue;
+}
+.country-checkout,
+.state-checkout,
+.zip-checkout {
+  width: 25%;
+  height: 35px;
+  border-radius: 5px;
+  font-family: cursive;
+  margin: 10px 25px;
+}
+.button-checkout {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+  height: 35px;
+  background-color: lawngreen;
+  font-size: large;
+  font-family: fantasy;
+}
+.cart-checkout {
+  box-sizing: border-box;
+  border: 2px solid;
+  height: auto;
+  width: auto;
+  overflow: auto;
+  padding: 15px;
+}
+.product-details > span {
+  font-size: medium;
+  font-family: fantasy;
+}
+.product-details > p {
+  font-size: medium;
+  font-family: fantasy;
+}
+.product-details {
+  display: flex;
+}
+.checkout-section-header-cart {
+  text-align: center;
+  margin: 15px;
+  font-size: large;
+  font-family: fantasy;
+}
+.product-cart > span {
+  font-size: small;
+  font-family: auto;
+  margin-bottom: 10px;
+}
+.product-cart > p {
+  font-size: small;
+  font-family: auto;
+  margin-bottom: 10px;
+}
+.cart-price-checkout {
+  text-align: center;
+  font-family: fantasy;
+}
+.cart-price-value-checkout {
+  font-family: fantasy;
+}
+.order-placed {
+  font-size: larger;
+  font-family: cursive;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+.Orderlist-header {
+  text-align: center;
+  margin: 20px 20px;
+  font-size: large;
+  font-family: fantasy;
+}
+.view-orders {
+  border: 2px solid;
+  height: auto;
+  padding: 34px 20px;
+}
+.prod-list {
+  margin-bottom: 80px;
+  margin-top: 40px;
+  font-family: cursive;
+  border-bottom-style: dotted;
+  margin: 70px;
 }
